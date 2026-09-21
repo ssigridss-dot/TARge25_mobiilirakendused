@@ -9,7 +9,6 @@
         HorizontalOptions="Center"
         VerticalOptions="Center">
 
-        // Pealkiri
         <Label
             x:Name="statusLabel"
             Text="Vali valgus"
@@ -18,7 +17,6 @@
             HorizontalOptions="Center"
             TextColor="Black" />
 
-        // Valgusfoor
         <Border
             Stroke="Black"
             StrokeThickness="3"
@@ -30,7 +28,6 @@
                 Spacing="15"
                 HorizontalOptions="Center">
 
-                // Punane tuli
                 <BoxView
                     x:Name="redBox"
                     WidthRequest="100"
@@ -39,7 +36,6 @@
                     Color="Gray"
                     HorizontalOptions="Center" />
 
-                // Kollane tuli
                 <BoxView
                     x:Name="yellowBox"
                     WidthRequest="100"
@@ -48,7 +44,6 @@
                     Color="Gray"
                     HorizontalOptions="Center" />
 
-                // Roheline tuli
                 <BoxView
                     x:Name="greenBox"
                     WidthRequest="100"
@@ -61,7 +56,6 @@
 
         </Border>
 
-        // Nupud
         <HorizontalStackLayout
             Spacing="20"
             HorizontalOptions="Center">
