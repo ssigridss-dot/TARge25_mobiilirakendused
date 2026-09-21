@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp.ValgusfoorPage"
+             Title="Valgusfoor">
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        // Pealkiri
+        <Label
+            x:Name="statusLabel"
+            Text="Vali valgus"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            TextColor="Black" />
+
+        // Valgusfoor
+        <Border
+            Stroke="Black"
+            StrokeThickness="3"
+            BackgroundColor="Black"
+            Padding="20"
+            StrokeShape="RoundRectangle 20">
+
+            <VerticalStackLayout
+                Spacing="15"
+                HorizontalOptions="Center">
+
+                // Punane tuli
+                <BoxView
+                    x:Name="redBox"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    CornerRadius="50"
+                    Color="Gray"
+                    HorizontalOptions="Center" />
+
+                // Kollane tuli
+                <BoxView
+                    x:Name="yellowBox"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    CornerRadius="50"
+                    Color="Gray"
+                    HorizontalOptions="Center" />
+
+                // Roheline tuli
+                <BoxView
+                    x:Name="greenBox"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    CornerRadius="50"
+                    Color="Gray"
+                    HorizontalOptions="Center" />
+
+            </VerticalStackLayout>
+
+        </Border>
+
+        // Nupud
+        <HorizontalStackLayout
+            Spacing="20"
+            HorizontalOptions="Center">
+
+            <Button
+                Text="Sisse"
+                Clicked="OnSisseClicked"
+                BackgroundColor="Green"
+                TextColor="White"
+                WidthRequest="120" />
+
+            <Button
+                Text="Välja"
+                Clicked="OnValjaClicked"
+                BackgroundColor="DarkRed"
+                TextColor="White"
+                WidthRequest="120" />
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
