@@ -1,6 +1,6 @@
 using Microsoft.Maui.Layouts;
 
-namespace MauiApp;
+namespace MyMauiApp;
 
 public partial class RgbPage : ContentPage
 {

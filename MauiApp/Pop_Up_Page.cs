@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MauiApp;
+﻿
+namespace MyMauiApp;
 public class Pop_Up_Page : ContentPage
 {
     public Pop_Up_Page()

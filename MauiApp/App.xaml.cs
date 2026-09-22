@@ -1,26 +1,25 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace MauiApp
+namespace MyMauiApp;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            // loome esimese lehe (startPage)
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        // loome esimese lehe (startPage)
 
-            var startPage = new StartPage();
-            //Pakime selle NavigationPAge sisse, et saaksime kasutada navigeerimist
-            var navPage = new NavigationPage(startPage)
-            {
-                BarBackgroundColor = Colors.LightBlue,
-                BarTextColor = Colors.White
-            };
-            return new Window(new AppShell());
-        }
+        var startPage = new StartPage();
+        //Pakime selle NavigationPAge sisse, et saaksime kasutada navigeerimist
+        var navPage = new NavigationPage(startPage)
+        {
+            BarBackgroundColor = Colors.LightBlue,
+            BarTextColor = Colors.White
+        };
+        return new Window(new AppShell());
     }
 }

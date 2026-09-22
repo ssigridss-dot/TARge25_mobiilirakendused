@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp.TreePage"
+             x:Class="MyMauiApp.TreePage"
              Title="Puu">
     <Grid RowDefinitions="*,Auto"
           BackgroundColor="LightSkyBlue">
 
-        // PUU
         <AbsoluteLayout
             x:Name="TreeArea"
             Grid.Row="0">
 
-            // Muru
             <BoxView
                 Color="ForestGreen"
                 AbsoluteLayout.LayoutBounds="0,1,1,0.20"
                 AbsoluteLayout.LayoutFlags="All" />
 
-            // Puu tüvi
             <BoxView
                 x:Name="TreeTrunk"
                 Color="SaddleBrown"
@@ -25,7 +22,6 @@
                 AbsoluteLayout.LayoutBounds="0.5,0.72,55,250"
                 AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-            // Lehestik
             <Ellipse
                 x:Name="Leaves1"
                 Fill="ForestGreen"
@@ -44,7 +40,6 @@
                 AbsoluteLayout.LayoutBounds="0.68,0.48,160,160"
                 AbsoluteLayout.LayoutFlags="PositionProportional" />
 
-            // Õied
             <Ellipse
                 x:Name="Flower1"
                 Fill="HotPink"
@@ -68,7 +63,6 @@
 
         </AbsoluteLayout>
 
-        // JUHTPANEEL
         <ScrollView Grid.Row="1"
                     BackgroundColor="White">
 
@@ -77,13 +71,12 @@
                 Spacing="10">
 
                 <Label
-                    Text="🌳 Puu hooajad ja elutsükkel"
+                    Text="Puu"
                     FontSize="22"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
                     TextColor="DarkGreen" />
 
-                // Tegevuse valik
                 <Picker
                     x:Name="ActionPicker"
                     Title="Vali tegevus">
@@ -102,7 +95,6 @@
                     BackgroundColor="ForestGreen"
                     TextColor="White" />
 
-                // Info
                 <Label
                     x:Name="StatusLabel"
                     Text="Vali tegevus ja vajuta Käivita."
@@ -110,7 +102,6 @@
                     TextColor="DarkBlue"
                     HorizontalTextAlignment="Center" />
 
-                // Läbipaistvus
                 <Label
                     Text="Lehestiku läbipaistvus:"
                     FontAttributes="Bold" />
@@ -122,7 +113,6 @@
                     Value="1"
                     ValueChanged="OnOpacityChanged" />
 
-                // Animatsiooni kiirus
                 <Label
                     Text="Animatsiooni kiirus:"
                     FontAttributes="Bold" />
@@ -139,7 +129,6 @@
                     Text="1000 ms"
                     HorizontalOptions="Center" />
 
-                // Kuupäev
                 <Label
                     Text="Virtuaalne kuupäev:"
                     FontAttributes="Bold" />
@@ -148,7 +137,6 @@
                     x:Name="SeasonPicker"
                     DateSelected="OnDateSelected" />
 
-                // Kellaaeg
                 <Label
                     Text="Virtuaalne kellaaeg:"
                     FontAttributes="Bold" />

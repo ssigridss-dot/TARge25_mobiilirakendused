@@ -1,4 +1,4 @@
-namespace MauiApp;
+namespace MyMauiApp;
 
 public partial class TreePage : ContentPage
 {

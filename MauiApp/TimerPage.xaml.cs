@@ -1,8 +1,8 @@
-namespace MauiApp;
+namespace MyMauiApp;
 
 public partial class TimerPage : ContentPage
 {
-    public Timer_Page()
+    public TimerPage()
     {
         InitializeComponent();
     }

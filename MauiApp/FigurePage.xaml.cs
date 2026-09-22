@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls.Shapes;
 
-namespace MauiApp;
+namespace MyMauiApp;
 
 public partial class FigurePage : ContentPage
 {
