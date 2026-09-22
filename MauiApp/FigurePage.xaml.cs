@@ -1,3 +1,5 @@
+using Microsoft.Maui.Controls.Shapes;
+
 namespace MauiApp;
 
 public partial class FigurePage : ContentPage
@@ -125,7 +127,7 @@ public partial class FigurePage : ContentPage
         }
         else if (nupp.ZIndex == 2)
         {
-            Navigation.PushAsync(new Timer_Page()); //Siia lisame uue lehe, et saaks edasi liikuda
+            Navigation.PushAsync(new TimerPage()); //Siia lisame uue lehe, et saaks edasi liikuda
         }
     }
 }

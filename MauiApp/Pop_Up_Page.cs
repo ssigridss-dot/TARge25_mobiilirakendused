@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MauiApp
+namespace MauiApp;
 public class Pop_Up_Page : ContentPage
 {
     public Pop_Up_Page()
@@ -90,6 +90,4 @@ public class Pop_Up_Page : ContentPage
         }
     }
 
-}
-}
 }

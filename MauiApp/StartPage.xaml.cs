@@ -3,7 +3,7 @@ namespace MauiApp;
 public partial class StartPage : ContentPage
 {
     VerticalStackLayout vsl;
-    public List<ContentPage> lehed = new List<ContentPage>() { new TextPage(), new FigurePage(), new Timer_Page(), new ValgusFoorPage(), new DateTimePage(), new SteppSliderPage(), new RgbPage(), new TreePage() };
+    public List<ContentPage> lehed = new List<ContentPage>() { new TextPage(), new FigurePage(), new TimerPage(), new ValgusfoorPage(), new DateTimePage(), new SteppSliderPage(), new RgbPage(), new TreePage() };
     public List<string> Lehenimed = new List<string>() { "Testid", "Kujundus", "Taimer", "Valgusfoor", "Datetime", "SteppSlider", "RGB", "Tree" };
     public StartPage()
     {
