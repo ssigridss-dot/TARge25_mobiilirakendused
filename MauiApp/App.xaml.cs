@@ -14,7 +14,7 @@ public partial class App : Application
         // loome esimese lehe (startPage)
 
         var startPage = new StartPage();
-        //Pakime selle NavigationPAge sisse, et saaksime kasutada navigeerimist
+        //Pakime selle NavigationPage sisse, et saaksime kasutada navigeerimist
         var navPage = new NavigationPage(startPage)
         {
             BarBackgroundColor = Colors.LightBlue,

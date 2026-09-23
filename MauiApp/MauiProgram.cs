@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Hosting;
 
 namespace MyMauiApp;
 
 public static class MauiProgram
 {
-    public static MauiApp CreateMauiApp()
+    public static Microsoft.Maui.Hosting.MauiApp CreateMauiApp()
     {
-        var builder = MyMauiApp.CreateBuilder();
+        var builder = Microsoft.Maui.Hosting.MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
             .ConfigureFonts(fonts =>
@@ -16,7 +17,7 @@ public static class MauiProgram
             });
 
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
         return builder.Build();

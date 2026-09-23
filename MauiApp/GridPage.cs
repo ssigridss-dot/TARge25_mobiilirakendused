@@ -1,9 +1,4 @@
-﻿using Android.App;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MauiApp
+﻿namespace MyMauiApp
 {
     public class GridPage : ContentPage
     {
@@ -85,8 +80,8 @@ namespace MauiApp
         private void Picker_SelectedIndexChanged(object? sender, EventArgs e)
         {
             if (picker.SelectedIndex == -1) return; //kui ei ole valitud, siis ei tee midagi
-            if (picker.SelectedIndex == 0) image.Source = "pilt1.png";
-            else if (picker.SelectedIndex == 1) image.Source = "pilt2.png";
+            if (picker.SelectedIndex == 0) image.Source = "pilt1.jpg";
+            else if (picker.SelectedIndex == 1) image.Source = "pilt2.jpg";
             else if (picker.SelectedIndex == 2) image.Source = "pilt3.png";
         }
         private Grid Tee_gr3x3() //3x3 grid

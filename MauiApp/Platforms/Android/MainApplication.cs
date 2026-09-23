@@ -11,6 +11,6 @@ namespace MyMauiApp
         {
         }
 
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        protected override global::Microsoft.Maui.Hosting.MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
     }
 }

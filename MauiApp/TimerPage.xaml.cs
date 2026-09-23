@@ -2,36 +2,51 @@ namespace MyMauiApp;
 
 public partial class TimerPage : ContentPage
 {
+    private bool _isRunning = false;
+
     public TimerPage()
     {
         InitializeComponent();
     }
-    bool on_off = true;
+
     private async void ShowTime()
     {
-        while (on_off)
+        while (_isRunning)
         {
-            timer_btn.Text = DateTime.Now.ToString("T");
+            // Kasutan MainThreadi, et tagada kasutajaliidese turvaline uuendamine
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                if (timer_btn != null)
+                {
+                    timer_btn.Text = DateTime.Now.ToString("T");
+                }
+            });
+
             await Task.Delay(1000);
         }
     }
 
     private void timer_btn_Clicked(object sender, EventArgs e)
     {
-        if (on_off)
+        if (!_isRunning)
         {
-            on_off = true;
+            _isRunning = true;
             ShowTime();
         }
+        else
+        {
+            _isRunning = false; // Peatab taimeri uuel vajutusel
+        }
     }
+
     private async void tagasi_Clicked(object sender, EventArgs e)
     {
-        on_off = false; // Peatab ShowTime() tsükli
-        await Navigation.PopAsync(); // Saabub tagasi eelmisele lehele
+        _isRunning = false; // Peatab tsükli lehelt lahkudes
+        await Navigation.PopAsync();
     }
 
     private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
-        // Lisa vajadusel 'lbl' vajutuse loogika
+        // Vajadusel saab siia lisada loogika
     }
 }
